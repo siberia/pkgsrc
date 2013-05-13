@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.12 2012/10/29 05:07:06 asau Exp $
 #
 
-DISTNAME=	xf86-video-siliconmotion-1.7.3
-PKGREVISION=	1
+DISTNAME=	xf86-video-siliconmotion-1.7.6
+PKGREVISION=	
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2

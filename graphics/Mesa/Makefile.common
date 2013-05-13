@@ -22,10 +22,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mesa3d.org/
 
 WRKSRC=			${WRKDIR}/Mesa-${MESA_VERSION}
-BUILDING_MESA=		yes
-NO_CONFIGURE=		yes
 DIST_SUBDIR=		Mesa-${MESA_PKGVERSION}
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

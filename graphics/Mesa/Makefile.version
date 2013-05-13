@@ -9,7 +9,7 @@
 # used by graphics/Mesa/Makefile.common
 
 MESA_DISTNAME= 		MesaLib-${MESA_VERSION}
-MESA_SITES=		${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+MESA_SITES=		ftp://freedesktop.org/pub/mesa/${MESA_VERSION}/
 
-MESA_VERSION=		7.4.4
+MESA_VERSION=		7.11.2
 MESA_PKGVERSION=	${MESA_VERSION}

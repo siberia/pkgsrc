@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2013/05/10 21:01:16 richard Exp $
+# $NetBSD: Makefile,v 1.173 2013/02/16 11:24:59 wiz Exp $
 #
 
 DISTNAME=	gdm-2.20.11
@@ -126,6 +126,7 @@ PLIST.gdmopen=		yes
 .endif
 PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
 
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
@@ -136,7 +137,6 @@ BUILDLINK_API_DEPENDS.libart+=	libart>=2.3.11
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"

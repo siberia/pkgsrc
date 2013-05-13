@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	MesaLib
 MESALIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=3.4.2
-BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=7.0.3
+BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=7.11.2
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 
 .include "../../mk/bsd.fast.prefs.mk"

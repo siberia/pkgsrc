@@ -1,0 +1,26 @@
+$NetBSD$
+
+--- bin/mklib.orig	2011-10-15 00:43:58.000000000 +0000
++++ bin/mklib
+@@ -426,7 +426,20 @@ case $ARCH in
+         if [ $STATIC = 1 ] ; then
+ 	    LIBNAME="lib${LIBNAME}.a"
+ 	    echo "mklib: Making SunOS static library: " ${LIBNAME}
+-	    FINAL_LIBS=`make_ar_static_lib -ruc 0 ${LIBNAME} ${OBJECTS}`
++#	    FINAL_LIBS=`make_ar_static_lib -ruc 0 ${LIBNAME} ${OBJECTS}`
++           OPTS="-rucs"
++            if [ "${ALTOPTS}" ] ; then
++                OPTS=${ALTOPTS}
++            fi
++
++            # expand .a into .o files
++            NEW_OBJECTS=`expand_archives ${LIBNAME}.obj $OBJECTS`
++
++            # make static lib
++            FINAL_LIBS=`make_ar_static_lib ${OPTS} 0 ${LIBNAME} ${NEW_OBJECTS}`
++
++            # remove temporary extracted .o files
++            rm -rf ${LIBNAME}.obj
+ 	else
+ 	    if [ $NOPREFIX = 0 ] ; then
+ 		LIBNAME="lib${LIBNAME}.so"

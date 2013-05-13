@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.22 2012/11/16 20:04:47 joerg Exp $
 #
 
-DISTNAME=		xproto-7.0.23
-PKGREVISION=		2
+DISTNAME=		xproto-7.0.24
+PKGREVISION=		
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	xproto.pc.in
 USE_LANGUAGES=		c
 
-post-extract:
-	${MV} ${WRKSRC}/Xos_r.h ${WRKSRC}/Xos_r.h.in
+#post-extract:
+#	${MV} ${WRKSRC}/Xos_r.h ${WRKSRC}/Xos_r.h.in
 
 .include "../../mk/bsd.pkg.mk"

@@ -14,18 +14,9 @@
    assume the entire world conforms to the behavior of (recent?) Linux 
    "distros".
 
- - Check to see if HZ is actually used anywhere.  Cursory grepping
-   of the code found nothing.
-
- - Once we settle on which build-time configuration variables we will
-   use, document them and/or add them to mk/defaults/mk.conf.
-
- - The xcb (X C Bindings, not X Cut Buffer, heh) support is currently 
-   disabled.
-
- - The pkg-config files are not generated with any dependency information.
-   I'm not sure that anything in pkgsrc currently uses these, though.
-
  - I have not packaged the new MesaDemos yet due to lack of time.
 
+ - verify and update BUILDLINK_API_DEPENDS
+
    --bjs
+   and updated by richard

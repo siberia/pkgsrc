@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.10 2012/10/29 05:07:03 asau Exp $
 #
 
-DISTNAME=	xf86-video-chips-1.2.1
-PKGREVISION=	1
+DISTNAME=	xf86-video-chips-1.2.5
+PKGREVISION=	
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +19,14 @@ USE_TOOLS+=	pkg-config
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
+
+#
+# it appears the 1.2.5 tarball forgot something
+#
+post-extract:
+.if !exists(${WRKSRC}/util/iopl.h)
+	${CP} ${FILESDIR}/iopl.h ${WRKSRC}/util/
 .endif
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
