@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	libpciaccess-0.13.1
+PKGREVISION=	1
 CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2

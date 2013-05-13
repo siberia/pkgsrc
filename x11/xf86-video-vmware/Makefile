@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.15 2012/10/29 05:07:07 asau Exp $
 #
 
-DISTNAME=	xf86-video-vmware-10.16.9
-PKGREVISION=	1
+DISTNAME=	xf86-video-vmware-13.0.1
+PKGREVISION=	
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2

@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	glu
 GLU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glu+=	glu>=3.4.2
-BUILDLINK_ABI_DEPENDS.glu+=	glu>=7.0.3
+BUILDLINK_ABI_DEPENDS.glu+=	glu>=7.11.2
 BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
 
 .include "../../graphics/MesaLib/buildlink3.mk"

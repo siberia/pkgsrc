@@ -28,7 +28,7 @@ SUBST_STAGE.atomic=	pre-configure
 SUBST_VARS.atomic=	ATOMIC_OPS_CHECK
 
 ATOMIC_OPS_CHECK=	0
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 .  if exists(/usr/include/sys/atomic.h)
 ATOMIC_OPS_CHECK=	1
 .  else
