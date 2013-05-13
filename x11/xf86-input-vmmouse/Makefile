@@ -12,7 +12,7 @@ COMMENT=	Modular Xorg VMware virtual mouse driver
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
