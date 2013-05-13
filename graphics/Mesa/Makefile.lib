@@ -18,7 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c99 c++
-USE_TOOLS+=		automake flex gmake pkg-config makedepend
+USE_TOOLS+=		automake bison flex gmake pkg-config makedepend
 
 PYTHON_FOR_BUILD_ONLY=  yes
 .include "../../lang/python/tool.mk"
